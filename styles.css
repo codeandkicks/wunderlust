@@ -49,3 +49,284 @@ table {
 	border-spacing: 0;
 }
 
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: 'Molle', cursive;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+h4, p, q, small, nav, button, form {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Mobile Styles */
+
+/* Header Styles */
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	padding: 1rem;
+	background: linear-gradient(to bottom, #55BCD5, #FFFFFF);
+	position: relative;
+  }
+  
+  header h1 {
+	margin: 0.5rem 0;
+  }
+  
+  header p {
+	margin: 0;
+  }
+  
+  #logo {
+	height: 50px;
+	margin-bottom: 1rem;
+  }
+  
+  #logo img {
+	height: 100%;
+	width: auto;
+  }
+  
+  #menu-toggle {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 2;
+  }
+  
+  #menu-toggle input {
+	display: none;
+  }
+  
+  #menu-toggle label {
+	display: block;
+	width: 30px;
+	height: 20px;
+	position: relative;
+	cursor: pointer;
+  }
+  
+  #menu-toggle label span {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #333;
+	position: absolute;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  #menu-toggle label span:nth-child(1) {
+	top: 0;
+  }
+  
+  #menu-toggle label span:nth-child(2) {
+	top: 50%;
+	transform: translateY(-50%);
+  }
+  
+  #menu-toggle label span:nth-child(3) {
+	bottom: 0;
+  }
+  
+  #menu-toggle input:checked + label span:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+  }
+  
+  #menu-toggle input:checked + label span:nth-child(2) {
+	opacity: 0;
+  }
+  
+  #menu-toggle input:checked + label span:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  nav {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	padding: 1rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 1;
+  }
+  
+  nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  nav ul li {
+	margin-bottom: 0.5rem;
+  }
+  
+  nav ul li a {
+	display: block;
+	padding: 0.5rem;
+	color: #333;
+	text-decoration: none;
+  }
+  
+  #menu-toggle input:checked ~ nav {
+	display: block;
+  }
+  
+  /* Image Grid Styles */
+  #img-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 0;
+  }
+  
+  #img-grid img {
+	width: 100%;
+	height: auto;
+	display: block;
+  }
+
+/* Skip link styling */
+#skip {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/* Hidden but accessible headings */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Custom input styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Custom radio button styles */
+.radio-input {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.radio-control {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.radio-input input:checked + .radio-control {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.radio-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Custom select styles */
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.custom-select .focus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.custom-select select:focus + .focus {
+  opacity: 1;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  /* Add styles for tablet screens (768px and above) */
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  /* Add styles for desktop screens (1024px and above) */
+}
+
+/* Custom Styles */
+/* Add any additional custom styles */
+
+/* Utility Classes */
+/* Add utility classes for reusable styles */
+
+.required {
+  color: #ff0000;
+}
+
+.form-required {
+  font-size: 0.8rem;
+  color: #ff0000;
+}

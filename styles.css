@@ -1,0 +1,426 @@
+/* Jonathan Walker */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+#img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+#img-grid img {
+    width: 100%;
+    height: auto;
+}
+
+/* Plan Your Trip section styles */
+#plan {
+    margin-bottom: 40px;
+}
+
+#plan h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#plan section {
+    margin-bottom: 20px;
+}
+
+#plan h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#plan img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Testimonials section styles */
+#testimonials {
+    margin-bottom: 40px;
+}
+
+#testimonials h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#testimonials section {
+    margin-bottom: 20px;
+}
+
+#testimonials img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#testimonials h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#testimonials p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#testimonials q {
+    font-style: italic;
+}
+
+/* About Your Destination section styles */
+#about {
+    margin-bottom: 40px;
+}
+
+#about h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#about section {
+    margin-bottom: 20px;
+}
+
+#about img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#about h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#about p {
+    font-size: 16px;
+}
+
+/* Contact Us section styles */
+#contact {
+    margin-bottom: 40px;
+}
+
+#contact h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+#contact label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#contact input,
+#contact select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#contact input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Custom input styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  /* Add your custom styles for text, email, and tel inputs */
+}
+
+/* Custom radio button styles */
+.radio-input {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.radio-input input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.radio-input:hover input ~ .radio-control {
+  background-color: #ccc;
+}
+
+.radio-input input:checked ~ .radio-control {
+  background-color: #2196F3;
+}
+
+.radio-control:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-input input:checked ~ .radio-control:after {
+  display: block;
+}
+
+.radio-input .radio-control:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Custom select styles */
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select select {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 16px;
+  /* Add more custom styles for the select element */
+}
+
+.custom-select .focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  /* Add more custom styles for the focus effect */
+}
+
+/* Media queries */
+
+/* Small screens */
+@media screen and (max-width: 600px) {
+  /* Adjust styles for small screens */
+  header h1 {
+    font-size: 20px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  #img-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #testimonials img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #contact form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Adjust styles for medium screens */
+  header h1 {
+    font-size: 28px;
+  }
+
+  header p {
+    font-size: 18px;
+  }
+
+  #img-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #testimonials section {
+    display: flex;
+    align-items: center;
+  }
+
+  #testimonials img {
+    margin-right: 20px;
+  }
+
+  #contact form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1025px) {
+  /* Adjust styles for large screens */
+  header h1 {
+    font-size: 32px;
+  }
+
+  header p {
+    font-size: 20px;
+  }
+
+  #img-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #testimonials section {
+    display: flex;
+    align-items: center;
+  }
+
+  #testimonials img {
+    margin-right: 20px;
+  }
+
+  #contact form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

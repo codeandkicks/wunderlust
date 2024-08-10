@@ -62,7 +62,7 @@ p, h1, h2, h3 {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 2;
 }
 
 a {
@@ -92,7 +92,7 @@ h4, p, q, small, nav, button, form {
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     background: linear-gradient(to bottom, #55BCD5, #FFFFFF);
     position: relative;
   }
@@ -115,92 +115,6 @@ h4, p, q, small, nav, button, form {
   #logo img {
     height: 100%;
     width: auto;
-  }
-
-  #menu-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 2;
-  }
-
-  #menu-toggle input {
-    display: none;
-  }
-
-  #menu-toggle label {
-    display: block;
-    width: 30px;
-    height: 20px;
-    position: relative;
-    cursor: pointer;
-  }
-
-  #menu-toggle label span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #333;
-    position: absolute;
-  }
-
-  #menu-toggle label span:nth-child(1) {
-    top: 0;
-  }
-
-  #menu-toggle label span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  #menu-toggle label span:nth-child(3) {
-    bottom: 0;
-  }
-
-  #menu-toggle input:checked + label span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  #menu-toggle input:checked + label span:nth-child(2) {
-    opacity: 0;
-  }
-
-  #menu-toggle input:checked + label span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  nav {
-    display: none;
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-  }
-
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav ul li {
-    margin-bottom: 0.5rem;
-  }
-
-  nav ul li a {
-    display: block;
-    padding: 0.5rem;
-    color: #333;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-
-  #menu-toggle input:checked ~ nav {
-    display: block;
   }
 
   /* Heading Styles */
@@ -231,6 +145,50 @@ h4, p, q, small, nav, button, form {
   }
 }
 
+#plan {
+  background-color: #F6D64A;
+  padding: 1rem;
+  
+  #plan section {
+    text-align: center;
+  }
+  
+  #plan h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  #plan a {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #plan a::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: #4caf50;
+    border-radius: 4px;
+    z-index: -1;
+  }
+  
+  #plan img {
+    width: 40px;
+    height: 40px;
+  }
+
+#testimonials {
+  padding: 1rem;
+}
+
+#about {
+  background-color: #499BD2;
+  padding: 1rem;
+
+}
+
 /* Skip link styling */
 #skip {
   position: absolute;
@@ -240,6 +198,8 @@ h4, p, q, small, nav, button, form {
   height: 1px;
   overflow: hidden;
 }
+
+
 
 #skip:focus {
   position: static;
